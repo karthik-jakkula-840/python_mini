@@ -27,6 +27,7 @@ def current_employe():
          print("-"*30)
          print("yes its currently employe in our company")
          print("-"*30)
+         break
      else:
             print("-"*30)
             print("sorry its not employe in our company")
@@ -60,21 +61,19 @@ def working_days_salary():
 
     for i in system:
         if i.name == name:
-            annual_salary = float(i.salary)
-            monthly_salary = annual_salary / 12
+            monthly_salary = float(i.salary)   
             per_day_salary = monthly_salary / 30
             final_salary = per_day_salary * days
 
             print("-"*30)
-
             print("Employee Name:", i.name)
             print("Days Worked:", days)
             print("Salary for working days:", final_salary)
             return
 
     print("Employee not found!")
+    
     print("-"*30)
-
 
 while True:
     print("1. Add_employe\n2.Show_employe\n3. current_employe\n4.high_salary_employe\n5.monthly_salary\n6.deleteemployee \n7.working_days_salary \n8.exit ") 
